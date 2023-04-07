@@ -58,7 +58,7 @@ services:
   lbp-0x:
     build:
       context: .
-      dockerfile: dockerfiles/SansXdebug.Dockerfile
+      dockerfile: dockerfiles/0x.Dockerfile
     container_name: lbp-0x
     depends_on:
       - lbp-api
