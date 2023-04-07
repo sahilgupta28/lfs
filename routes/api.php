@@ -18,4 +18,8 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/', function () {
+    return ['this-is-laravel-api' => app()->version()];
+});
+
 require __DIR__.'/auth.php';
