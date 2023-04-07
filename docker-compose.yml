@@ -69,6 +69,21 @@ services:
       lbp-network:
         ipv4_address: 10.10.1.5
 
+  lbp-fe-app:
+    build:
+      context: .
+      dockerfile: dockerfiles/FeApp.Dockerfile
+    container_name: lbp-fe-app
+    ports:
+      - "1001:3000"
+    volumes:
+      - ./fe-app:/var/www/html
+      - ./dockerfiles:/var/www/html/dockerfiles
+    restart: always
+    networks:
+      lbp-network:
+        ipv4_address: 10.10.1.6
+
 # On-disk storage of DB data, when containers are stopped
 volumes:
   lbp-pg-disk: {}
