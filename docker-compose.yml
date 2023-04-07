@@ -79,6 +79,7 @@ services:
     volumes:
       - ./fe-app:/var/www/html
       - ./dockerfiles:/var/www/html/dockerfiles
+    restart: always
     networks:
       lbp-network:
         ipv4_address: 10.10.1.6
