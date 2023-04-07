@@ -1,0 +1,9 @@
+{
+    "name": "placeholder-for-fe-app",
+    "scripts": {
+        "start": "exit 0"
+    },
+    "dependencies": {
+        "empty-npm-package": "^1.0"
+    }
+}
