@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return ['Laravel' => app()->version()];
+    return [
+        'Laravel_version' => app()->version(),
+        'BE_url' => env('APP_URL'),
+        'FE_url' => env('FRONTEND_URL')
+        ];
 });
